@@ -1,0 +1,26 @@
+
+.main-nav__title {
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 400;
+  color: $base-black;
+}
+
+.main-nav__list {
+  @include list();
+}
+
+.main-nav__link {
+  @include link();
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: $base-black;
+}
+
+.main-nav__link--active {
+  @media (min-width: $tablet-width) {
+    color: $base-primary;
+  }
+}

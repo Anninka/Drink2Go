@@ -1,0 +1,45 @@
+
+.swiper-slide {
+  background-color: $flat-white;
+}
+
+.swiper-slide__title {
+  font-size: 36px;
+  line-height: 48px;
+  font-weight: 700;
+
+  @media (min-width: $tablet-width) {
+    font-size: 56px;
+    line-height: 80px;
+  }
+}
+
+.swiper-slide__caption {
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: $base-primary;
+}
+
+.swiper-slide__text {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 32px;
+  }
+}
+
+.swiper-slide__price {
+  font-size: 20px;
+  line-height: 32px;
+  font-weight: 600;
+}
+
+.swiper-slide__button {
+  font-size: 16px;
+  line-height: 24px;
+}

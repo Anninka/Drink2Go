@@ -1,0 +1,40 @@
+
+.page-footer__navigation-title {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 700;
+  color: $base-primary;
+}
+
+.page-footer__navigation-list,
+.page-footer__details-list {
+  @include list();
+}
+
+.page-footer__navigation-item {
+  font-size: 12px;
+  line-height: 16px;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.page-footer__details-item {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+}
+
+.page-footer__academy-text {
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 400;
+  color: $base-grey;
+}
+
+.page-footer__academy-link {
+  @include link();
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 400;
+  color: $base-grey;
+}

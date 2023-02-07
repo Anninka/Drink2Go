@@ -1,0 +1,31 @@
+
+.page {
+  height: 100%;
+  font-family: "Montserrat", "Arial", sans-serif;
+  color: $base-black;
+}
+
+.page__body {
+  min-height: 100%;
+  margin: 0 auto;
+  background-color: $base-white;
+}
+
+.button {
+  display: block;
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-weight: 400;
+  color: $base-white;
+  background-color: $base-primary;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+
+  &:hover {
+
+  }
+
+  &:active {
+
+  }
+}

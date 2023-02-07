@@ -53,8 +53,5 @@
   "engines": {
     "node": ">=16.13.0"
   },
-  "type": "module",
-  "dependencies": {
-    "swiper": "^9.0.3"
-  }
+  "type": "module"
 }
