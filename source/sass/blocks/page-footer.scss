@@ -1,5 +1,6 @@
 
-.page-footer__navigation-title {
+.page-footer__navigation-title,
+.page-footer__contacts-title {
   font-size: 14px;
   line-height: 20px;
   font-weight: 700;
@@ -7,18 +8,19 @@
 }
 
 .page-footer__navigation-list,
-.page-footer__details-list {
+.page-footer__contacts-list {
   @include list();
 }
 
-.page-footer__navigation-item {
+.page-footer__navigation-link {
+  @include link();
   font-size: 12px;
   line-height: 16px;
   text-transform: uppercase;
   font-weight: 500;
 }
 
-.page-footer__details-item {
+.page-footer__contacts-item {
   font-size: 14px;
   line-height: 20px;
   font-weight: 400;

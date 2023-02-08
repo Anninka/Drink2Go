@@ -1,10 +1,82 @@
 
+.user-nav {
+  @include list();
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+
+  @media (min-width: $desktop-width) {
+    gap: 20px;
+  }
+}
+
+.user-nav__item:last-child {
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.main-nav--nojs .user-nav__item:last-child {
+  display: none;
+}
+
 .user-nav__link {
   @include link();
-  font-family: "Montserrat", "Arial", sans-serif;
-  font-size: 12px;
+  padding: 22px;
+  font-size: 0;
   line-height: 16px;
-  font-weight: 500;
-  text-transform: uppercase;
-  color: $base-black;
+
+  &:active {
+    background-color: $base-secondary;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 32px 22px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: block;
+    padding: 32px 20px;
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: $base-black;
+
+    &:active {
+      color: $base-primary;
+    }
+
+    &:active .user-nav__icon-user,
+    &:active .user-nav__icon-header-cart{
+      fill: $base-primary;
+    }
+  }
+}
+
+.user-nav__item,
+.user-nav__link {
+  display: block;
+  width: 60px;
+  height: 60px;
+
+  @media (min-width: $tablet-width) {
+    height: 80px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: auto;
+  }
+}
+
+.user-nav__icon-user,
+.user-nav__icon-header-cart {
+  width: 16px;
+  height: 16px;
+  fill: $base-black;
+
+  @media (min-width: $desktop-width) {
+    margin-right: 8px;
+    vertical-align: middle;
+  }
 }

@@ -5,6 +5,7 @@
     <title>Интернет-магазин кофейных напитков Drink2Go</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
     <link rel="icon" href="favicon.ico">
     <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml">
     <link rel="icon" href="img/favicons/apple.png">
@@ -13,14 +14,16 @@
   <body class="page__body">
     <header class="page-header">
       <nav class="main-nav main-nav--closed main-nav--nojs">
-        <a class="main-nav__logo-link">
-          <picture>
-            <source media="(min-width: 1440px)" srcset="img/header/logo-desc.svg">
-            <source media="(min-width: 768px)" srcset="img/header/logo-tablet.svg">
-            <img class="main-nav__logo" src="img/header/logo-mobile.svg" width="32" height="36" alt="Магазин «Drink2Go»">
-          </picture>
-        </a>
-        <p class="main-nav__title">Интернет-магазин кофейных напитков</p>
+        <div class="main-nav__logo-wrapper">
+          <a class="main-nav__logo-link">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="img/header/logo-desc.svg">
+              <source media="(min-width: 768px)" srcset="img/header/logo-tablet.svg">
+              <img class="main-nav__logo" src="img/header/logo-mobile.svg" width="32" height="36" alt="Магазин «Drink2Go»">
+            </picture>
+          </a>
+          <p class="main-nav__text">Интернет-магазин кофейных напитков</p>
+        </div>
         <ul class="main-nav__list">
           <li class="main-nav__item">
             <a class="main-nav__link main-nav__link--active" aria-current="page">
@@ -43,12 +46,22 @@
             </a>
           </li>
         </ul>
-        <ul class="main-nav__list user-nav">
+        <ul class="user-nav">
           <li class="user-nav__item">
-            <a class="user-nav__link" href="#">Войти</a>
+            <a class="user-nav__link" href="#">
+              <svg class="user-nav__icon-user">
+                <use xlink:href="img/icons/stack.svg#user"></use>
+              </svg>
+              Войти
+            </a>
           </li>
           <li class="user-nav__item">
-            <a class="user-nav__link" href="#">Корзина</a>
+            <a class="user-nav__link" href="#">
+              <svg class="user-nav__icon-header-cart">
+                <use xlink:href="img/icons/stack.svg#header-cart"></use>
+              </svg>
+              Корзина
+            </a>
           </li>
           <li class="user-nav__item">
             <button class="main-nav__toggle" type="button" aria-label="Меню сайта"></button>
@@ -68,48 +81,57 @@
               <h2 class="swiper-slide__title">Декаф Флэт Уайт</h2>
               <p class="swiper-slide__caption">Новинка!</p>
               <p class="swiper-slide__text">Свежесваренный кофе без кофеина из Эфиопии с натуральным фермерским молоком — то, что нужно для расслабления после тяжёлого рабочего дня</p>
-              <p class="swiper-slide__price">225&#8381;</p>
-              <button class="swiper-slide__button button" type="button">Заказать</button>
-              <picture>
+              <div class="swiper-slide__price-wrapper">
+                <p class="swiper-slide__old-price">295&#8381;</p>
+                <p class="swiper-slide__price">225&#8381;</p>
+                <button class="swiper-slide__button button" type="button">Заказать</button>
+              </div>
+              <picture class="swiper-slide__image">
                 <source type="image/webp" media="(min-width: 1440px)" srcset="img/slider/flat_white_desk.webp 1x, img/slider/flat_white_desc@2x.webp 2x">
                 <source type="image/webp" media="(min-width: 768px)" srcset="img/slider/flat_white_tablet.webp 1x, img/slider/flat_white_tablet@2x.webp 2x">
                 <source type="image/webp" srcset="img/slider/flat_white_mobile.webp 1x, img/slider/flat_white_mobile@2x.webp 2x">
 
                 <source media="(min-width: 1440px)" srcset="img/slider/flat_white_desk.png 1x, img/slider/flat_white_desk@2x.png 2x">
                 <source media="(min-width: 768px)" srcset="img/slider/flat_white_tablet.png 1x, img/slider/flat_white_tablet@2x.png 2x">
-                <img class="promo__image" src="img/slider/flat_white_mobile.png" srcset="img/flat_white_mobile@2x.png 2x" width="280" height="280" alt="Банка напитка молочного цвета Decaf Flat White">
+                <img src="img/slider/flat_white_mobile.png" srcset="img/flat_white_mobile@2x.png 2x" width="280" height="280" alt="Банка напитка молочного цвета Decaf Flat White">
               </picture>
             </div>
             <div class="swiper-slide">
               <h2 class="swiper-slide__title">Лавандовый Латте</h2>
               <p class="swiper-slide__caption">Новинка!</p>
               <p class="swiper-slide__text">Невероятное сочетание перуанской высокогорной арабики с молоком ламы и лавандовым сиропом унесёт вас прямо на вершину Радужных гор</p>
-              <p class="swiper-slide__price">265&#8381;</p>
-              <button class="swiper-slide__button button" type="button">Заказать</button>
-              <picture>
+              <div class="swiper-slide__price-wrapper">
+                <p class="swiper-slide__old-price">285&#8381;</p>
+                <p class="swiper-slide__price">265&#8381;</p>
+                <button class="swiper-slide__button button" type="button">Заказать</button>
+              </div>
+              <picture class="swiper-slide__image">
                 <source type="image/webp" media="(min-width: 1440px)" srcset="img/slider/lavender_desk.webp 1x, img/slider/lavender_desk.webp@2x.webp 2x">
                 <source type="image/webp" media="(min-width: 768px)" srcset="img/slider/lavender_tablet.webp 1x, img/slider/lavender_tablet@2x.webp 2x">
                 <source type="image/webp" srcset="img/slider/lavender_mobile.webp 1x, img/slider/lavender_mobile.webp@2x.webp 2x">
 
                 <source media="(min-width: 1440px)" srcset="img/slider/lavender_desk.png 1x, img/slider/lavender_desk.png@2x.png 2x">
                 <source media="(min-width: 768px)" srcset="img/slider/lavender_tablet.png 1x, img/slider/lavender_tablet@2x.png 2x">
-                <img class="promo__image" src="img/slider/lavender_mobile.png" srcset="img/slider/lavender_mobile@2x.png 2x" width="280" height="280" alt="Банка напитка фиолетового цвета Lavender Latte">
+                <img src="img/slider/lavender_mobile.png" srcset="img/slider/lavender_mobile@2x.png 2x" width="280" height="280" alt="Банка напитка фиолетового цвета Lavender Latte">
               </picture>
             </div>
             <div class="swiper-slide">
               <h2 class="swiper-slide__title">Тройной Эспрессо</h2>
               <p class="swiper-slide__caption">Новинка!</p>
               <p class="swiper-slide__text">СМощнее укола адреналина, чернее самой тёмной ночи, этот тройной эспрессо из Колумбии покажет вам, что такое настоящая бодрость</p>
-              <p class="swiper-slide__price">375&#8381;</p>
-              <button class="swiper-slide__button button" type="button">Заказать</button>
-              <picture>
+              <div class="swiper-slide__price-wrapper">
+                <p class="swiper-slide__old-price">395&#8381;</p>
+                <p class="swiper-slide__price">375&#8381;</p>
+                <button class="swiper-slide__button button" type="button">Заказать</button>
+              </div>
+              <picture class="swiper-slide__image">
                 <source type="image/webp" media="(min-width: 1440px)" srcset="img/slider/espresso_desk.webp 1x, img/slider/espresso_desk@2x.webp 2x">
                 <source type="image/webp" media="(min-width: 768px)" srcset="img/slider/espresso_tablet.webp 1x, img/slider/espresso_tablet@2x.webp 2x">
                 <source type="image/webp" srcset="img/slider/espresso_mobile.webp 1x, img/slider/espresso_mobile@2x.webp 2x">
 
                 <source media="(min-width: 1440px)" srcset="img/slider/espresso_desk.png 1x, img/slider/espresso_desk@2x.png 2x">
                 <source media="(min-width: 768px)" srcset="img/slider/espresso_tablet.png 1x, img/slider/espresso_tablet@2x.png 2x">
-                <img class="promo__image" src="img/slider/espresso_mobile.png" srcset="img/slider/espresso_mobile.png@2x.png 2x" width="280" height="280" alt="Банка напитка черного цвета Triple Espresso">
+                <img src="img/slider/espresso_mobile.png" srcset="img/slider/espresso_mobile.png@2x.png 2x" width="280" height="280" alt="Банка напитка черного цвета Triple Espresso">
               </picture>
             </div>
             ...
@@ -118,8 +140,16 @@
           <div class="swiper-pagination"></div>
 
           <!-- If we need navigation buttons -->
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev">
+            <svg class="swiper-button-prev__icon">
+              <use xlink:href="img/icons/stack.svg#prev"></use>
+            </svg>
+          </div>
+          <div class="swiper-button-next">
+            <svg class="swiper-button-next__icon">
+              <use xlink:href="img/icons/stack.svg#next"></use>
+            </svg>
+          </div>
         </div>
       </section>
       <section class="advantages">
@@ -324,7 +354,7 @@
     <footer class="page-footer">
       <section class="page-footer__map">
         <h2 class="visually-hidden">Наше местоположение на карте</h2>
-        <p>ТУТ ТИПА КАРТА</p>
+        <div>ТУТ ТИПА КАРТА</div>
       </section>
       <div>
         <div class="social">
@@ -363,25 +393,39 @@
         <div class="page-footer__navigation">
           <h3 class="page-footer__navigation-title">Интернет-магазин</h3>
           <ul class="page-footer__navigation-list">
-            <li class="page-footer__navigation-item">Каталог</li>
-            <li class="page-footer__navigation-item">Доставка</li>
-            <li class="page-footer__navigation-item">Способ оплаты</li>
-            <li class="page-footer__navigation-item">О нас</li>
+            <li class="page-footer__navigation-item">
+              <a class="page-footer__navigation-link" href="">Каталог</a>
+            </li>
+            <li class="page-footer__navigation-item">
+              <a class="page-footer__navigation-link" href="">Доставка</a>
+            </li>
+            <li class="page-footer__navigation-item">
+              <a class="page-footer__navigation-link" href="">Способ оплаты</a>
+            </li>
+            <li class="page-footer__navigation-item">
+              <a class="page-footer__navigation-link" href="">О нас</a>
+            </li>
           </ul>
         </div>
         <div class="page-footer__navigation">
           <h3 class="page-footer__navigation-title">Медиа</h3>
           <ul class="page-footer__navigation-list">
-            <li class="page-footer__navigation-item">Блог</li>
-            <li class="page-footer__navigation-item">Информация для СМИ</li>
-            <li class="page-footer__navigation-item">Правовая информация</li>
+            <li class="page-footer__navigation-item">
+              <a class="page-footer__navigation-link" href="">Блог</a>
+            </li>
+            <li class="page-footer__navigation-item">
+              <a class="page-footer__navigation-link" href="">Информация для СМИ</a>
+            </li>
+            <li class="page-footer__navigation-item">
+              <a class="page-footer__navigation-link" href="">Правовая информация</a>
+            </li>
           </ul>
         </div>
-        <div class="page-footer__navigation">
-          <h3 class="page-footer__navigation-title">Контакты</h3>
-          <ul class="page-footer__details-list">
-            <li class="page-footer__details-item">Санкт-Петербург, набережная реки Карповки, дом 5</li>
-            <li class="page-footer__details-item">+7 (999) 999-99-99</li>
+        <div class="page-footer__contacts">
+          <h3 class="page-footer__contacts-title">Контакты</h3>
+          <ul class="page-footer__contacts-list">
+            <li class="page-footer__contacts-item">Санкт-Петербург, набережная реки Карповки, дом 5</li>
+            <li class="page-footer__contacts-item">+7 (999) 999-99-99</li>
           </ul>
         </div>
       </div>
@@ -391,6 +435,7 @@
         </p>
       </div>
     </footer>
-    <script src="./js/script.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
   </body>
 </html>

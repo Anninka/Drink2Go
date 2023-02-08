@@ -1,9 +1,20 @@
 
+.swiper {
+  position: relative;
+}
+
 .swiper-slide {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 20px 60px;
   background-color: $flat-white;
+  text-align: center;
 }
 
 .swiper-slide__title {
+  margin: 0;
+  margin-bottom: 10px;
+
   font-size: 36px;
   line-height: 48px;
   font-weight: 700;
@@ -15,6 +26,11 @@
 }
 
 .swiper-slide__caption {
+  order: -1;
+
+  margin: 0;
+  margin-bottom: 5px;
+
   font-size: 12px;
   line-height: 16px;
   font-weight: 700;
@@ -23,6 +39,9 @@
 }
 
 .swiper-slide__text {
+  margin: 0;
+  margin-bottom: 19px;
+
   font-size: 14px;
   line-height: 20px;
   font-weight: 400;
@@ -33,13 +52,75 @@
   }
 }
 
+.swiper-slide__price-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide__old-price {
+  margin: 0;
+  margin-right: 7px;
+
+  font-size: 16px;
+  line-height: 32px;
+  font-weight: 400;
+  text-decoration: line-through;
+  color: $base-primary;
+}
+
 .swiper-slide__price {
+  margin: 0;
+  margin-right: 20px;
+
   font-size: 20px;
   line-height: 32px;
   font-weight: 600;
 }
 
 .swiper-slide__button {
+  padding: 8px 20px;
+  height: 40px;
+
   font-size: 16px;
   line-height: 24px;
+}
+
+.swiper-slide__image {
+  order: -2;
+  margin-bottom: 6px;
+}
+
+.swiper-button-prev {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 656px;
+  cursor: pointer;
+}
+
+.swiper-button-next {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 20px;
+  height: 656px;
+  cursor: pointer;
+}
+
+.swiper-button-next__icon,
+.swiper-button-prev__icon {
+  width: 11px;
+  height: 20px;
+  fill: $base-primary;
+  margin-top: 318px;
+}
+
+.swiper-button-next__icon {
+  margin-left: 5px;
+}
+
+.swiper-button-prev__icon {
+  margin-left: 4px;
 }

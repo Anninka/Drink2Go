@@ -16,7 +16,6 @@
 
 .product__title-link {
   @include link();
-  color: $base-black;
 }
 
 .product__text {
