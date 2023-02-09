@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <title>Интернет-магазин кофейных напитков Drink2Go</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
     <link rel="icon" href="favicon.ico">
     <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml">
     <link rel="icon" href="img/favicons/apple.png">
@@ -77,61 +77,61 @@
           <!-- Additional required wrapper -->
           <div class="swiper-wrapper">
             <!-- Slides -->
-            <div class="swiper-slide">
+            <div class="swiper-slide swiper-slide--first">
               <h2 class="swiper-slide__title">Декаф Флэт Уайт</h2>
               <p class="swiper-slide__caption">Новинка!</p>
-              <p class="swiper-slide__text">Свежесваренный кофе без кофеина из Эфиопии с натуральным фермерским молоком — то, что нужно для расслабления после тяжёлого рабочего дня</p>
+              <p class="swiper-slide__text">Свежесваренный кофе без кофеина из Эфиопии с&nbsp;натуральным фермерским молоком — то, что нужно для&nbsp;расслабления после тяжёлого рабочего дня</p>
               <div class="swiper-slide__price-wrapper">
                 <p class="swiper-slide__old-price">295&#8381;</p>
                 <p class="swiper-slide__price">225&#8381;</p>
                 <button class="swiper-slide__button button" type="button">Заказать</button>
               </div>
-              <picture class="swiper-slide__image">
+              <picture class="swiper-slide__picture">
                 <source type="image/webp" media="(min-width: 1440px)" srcset="img/slider/flat_white_desk.webp 1x, img/slider/flat_white_desc@2x.webp 2x">
                 <source type="image/webp" media="(min-width: 768px)" srcset="img/slider/flat_white_tablet.webp 1x, img/slider/flat_white_tablet@2x.webp 2x">
                 <source type="image/webp" srcset="img/slider/flat_white_mobile.webp 1x, img/slider/flat_white_mobile@2x.webp 2x">
 
                 <source media="(min-width: 1440px)" srcset="img/slider/flat_white_desk.png 1x, img/slider/flat_white_desk@2x.png 2x">
                 <source media="(min-width: 768px)" srcset="img/slider/flat_white_tablet.png 1x, img/slider/flat_white_tablet@2x.png 2x">
-                <img src="img/slider/flat_white_mobile.png" srcset="img/flat_white_mobile@2x.png 2x" width="280" height="280" alt="Банка напитка молочного цвета Decaf Flat White">
+                <img class="swiper-slide__image" src="img/slider/flat_white_mobile.png" srcset="img/flat_white_mobile@2x.png 2x" width="280" height="280" alt="Банка напитка молочного цвета Decaf Flat White">
               </picture>
             </div>
-            <div class="swiper-slide">
+            <div class="swiper-slide swiper-slide--second">
               <h2 class="swiper-slide__title">Лавандовый Латте</h2>
               <p class="swiper-slide__caption">Новинка!</p>
-              <p class="swiper-slide__text">Невероятное сочетание перуанской высокогорной арабики с молоком ламы и лавандовым сиропом унесёт вас прямо на вершину Радужных гор</p>
+              <p class="swiper-slide__text">Невероятное сочетание перуанской высокогорной арабики с&nbsp;молоком ламы и&nbsp;лавандовым сиропом унесёт вас прямо на вершину Радужных гор</p>
               <div class="swiper-slide__price-wrapper">
                 <p class="swiper-slide__old-price">285&#8381;</p>
                 <p class="swiper-slide__price">265&#8381;</p>
                 <button class="swiper-slide__button button" type="button">Заказать</button>
               </div>
-              <picture class="swiper-slide__image">
-                <source type="image/webp" media="(min-width: 1440px)" srcset="img/slider/lavender_desk.webp 1x, img/slider/lavender_desk.webp@2x.webp 2x">
+              <picture class="swiper-slide__picture">
+                <source type="image/webp" media="(min-width: 1440px)" srcset="img/slider/lavender_desk.webp 1x, img/slider/lavender_desk@2x.webp 2x">
                 <source type="image/webp" media="(min-width: 768px)" srcset="img/slider/lavender_tablet.webp 1x, img/slider/lavender_tablet@2x.webp 2x">
-                <source type="image/webp" srcset="img/slider/lavender_mobile.webp 1x, img/slider/lavender_mobile.webp@2x.webp 2x">
+                <source type="image/webp" srcset="img/slider/lavender_mobile.webp 1x, img/slider/lavender_mobile@2x.webp 2x">
 
                 <source media="(min-width: 1440px)" srcset="img/slider/lavender_desk.png 1x, img/slider/lavender_desk.png@2x.png 2x">
                 <source media="(min-width: 768px)" srcset="img/slider/lavender_tablet.png 1x, img/slider/lavender_tablet@2x.png 2x">
-                <img src="img/slider/lavender_mobile.png" srcset="img/slider/lavender_mobile@2x.png 2x" width="280" height="280" alt="Банка напитка фиолетового цвета Lavender Latte">
+                <img class="swiper-slide__image" src="img/slider/lavender_mobile.png" srcset="img/slider/lavender_mobile@2x.png 2x" width="280" height="280" alt="Банка напитка фиолетового цвета Lavender Latte">
               </picture>
             </div>
-            <div class="swiper-slide">
+            <div class="swiper-slide swiper-slide--third">
               <h2 class="swiper-slide__title">Тройной Эспрессо</h2>
               <p class="swiper-slide__caption">Новинка!</p>
-              <p class="swiper-slide__text">СМощнее укола адреналина, чернее самой тёмной ночи, этот тройной эспрессо из Колумбии покажет вам, что такое настоящая бодрость</p>
+              <p class="swiper-slide__text">Мощнее укола адреналина, чернее самой тёмной ночи, этот тройной эспрессо из&nbsp;Колумбии покажет вам, что такое настоящая бодрость</p>
               <div class="swiper-slide__price-wrapper">
                 <p class="swiper-slide__old-price">395&#8381;</p>
                 <p class="swiper-slide__price">375&#8381;</p>
                 <button class="swiper-slide__button button" type="button">Заказать</button>
               </div>
-              <picture class="swiper-slide__image">
+              <picture class="swiper-slide__picture">
                 <source type="image/webp" media="(min-width: 1440px)" srcset="img/slider/espresso_desk.webp 1x, img/slider/espresso_desk@2x.webp 2x">
                 <source type="image/webp" media="(min-width: 768px)" srcset="img/slider/espresso_tablet.webp 1x, img/slider/espresso_tablet@2x.webp 2x">
                 <source type="image/webp" srcset="img/slider/espresso_mobile.webp 1x, img/slider/espresso_mobile@2x.webp 2x">
 
                 <source media="(min-width: 1440px)" srcset="img/slider/espresso_desk.png 1x, img/slider/espresso_desk@2x.png 2x">
                 <source media="(min-width: 768px)" srcset="img/slider/espresso_tablet.png 1x, img/slider/espresso_tablet@2x.png 2x">
-                <img src="img/slider/espresso_mobile.png" srcset="img/slider/espresso_mobile.png@2x.png 2x" width="280" height="280" alt="Банка напитка черного цвета Triple Espresso">
+                <img class="swiper-slide__image" src="img/slider/espresso_mobile.png" srcset="img/slider/espresso_mobile.png@2x.png 2x" width="280" height="280" alt="Банка напитка черного цвета Triple Espresso">
               </picture>
             </div>
             ...
@@ -140,12 +140,12 @@
           <div class="swiper-pagination"></div>
 
           <!-- If we need navigation buttons -->
-          <div class="swiper-button-prev">
+          <div class="swiper-button-prev swiper-button-disabled">
             <svg class="swiper-button-prev__icon">
               <use xlink:href="img/icons/stack.svg#prev"></use>
             </svg>
           </div>
-          <div class="swiper-button-next">
+          <div class="swiper-button-next swiper-button-disabled">
             <svg class="swiper-button-next__icon">
               <use xlink:href="img/icons/stack.svg#next"></use>
             </svg>
@@ -153,27 +153,25 @@
         </div>
       </section>
       <section class="advantages">
-        <div class="advantages__wrapper">
-          <h2 class="advantages__title">Преимущества</h2>
-          <h3 class="advantages__subtitle">Главные причины выбрать Drink2Go</h3>
-          <ul class="advantages__list">
-            <li class="advantages__item advantages__item--speed">
-              <h4 class="advantages__caption">Скорость</h4>
-              <p class="advantages__text">Готовый напиток всегда под рукой — просто открой банку</p>
-            </li>
-            <li class="advantages__item advantages__item--comfort">
-              <h4 class="advantages__caption">Удобство</h4>
-              <p class="advantages__text">Легко помещается и в карман, и в маленькую сумочку</p></li>
-            <li class="advantages__item advantages__item--energy">
-              <h4 class="advantages__caption">Бодрость</h4>
-              <p class="advantages__text">Сбалансированная доза кофеина даст мощный заряд энергии</p>
-            </li>
-            <li class="advantages__item advantages__item--ecological">
-              <h4 class="advantages__caption">Экологичность</h4>
-              <p class="advantages__text">Вся упаковка сделана из перерабатываемых материалов</p>
-            </li>
-          </ul>
-        </div>
+        <h2 class="advantages__title">Преимущества</h2>
+        <h3 class="advantages__subtitle">Главные причины выбрать Drink2Go</h3>
+        <ul class="advantages__list">
+          <li class="advantages__item">
+            <h4 class="advantages__caption advantages__caption--speed">Скорость</h4>
+            <p class="advantages__text">Готовый напиток всегда под рукой — просто открой банку</p>
+          </li>
+          <li class="advantages__item">
+            <h4 class="advantages__caption advantages__caption--comfort">Удобство</h4>
+            <p class="advantages__text">Легко помещается и&nbsp;в&nbsp;карман, и&nbsp;в&nbsp;маленькую сумочку</p></li>
+          <li class="advantages__item">
+            <h4 class="advantages__caption advantages__caption--energy">Бодрость</h4>
+            <p class="advantages__text">Сбалансированная доза кофеина даст мощный заряд энергии</p>
+          </li>
+          <li class="advantages__item">
+            <h4 class="advantages__caption advantages__caption--ecological">Экологичность</h4>
+            <p class="advantages__text">Вся упаковка сделана из&nbsp;перерабатываемых материалов</p>
+          </li>
+        </ul>
       </section>
       <section class="catalog">
         <div class="catalog-title-wrapper">
@@ -435,7 +433,7 @@
         </p>
       </div>
     </footer>
-    <script src="js/script.js"></script>
     <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>

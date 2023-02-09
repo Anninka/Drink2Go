@@ -17,8 +17,36 @@ navToggle.addEventListener('click', function() {
 
 /* SWIPER */
 const swiper = new Swiper('.swiper', {
+  // Выключает бесконечное листание слайдов
+  loop: false,
+
+  // Добавляет стрелки листания влево-вправо
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
+  },
+
+  // Добавляет пагинацию
+  pagination: {
+    el: '.swiper-pagination',
+    // Нажатие на буллеты переключает слайды?
+    clickable: true,
+  },
+
+  // Включает управление слайдером с клавиатуры
+  keyboard: {
+    enabled: true,
+    // Только когда слайдер в пределах вьюпорта
+    onlyInViewport: true,
+  },
+
+  // Автолистание слайдов
+  autoplay: {
+    // Задержка в мс
+    delay: 3000,
+    // Закончить на последнем файле?
+    stopOnLastSLide: false,
+    //Остановить листание после ручного переключения?
+    disableOnIteraction: true,
   },
 });
