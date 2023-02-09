@@ -118,7 +118,7 @@
 .main-nav__link--active {
   @media (min-width: $tablet-width) {
     color: $base-primary;
-    border-bottom: 2px solid $base-primary ;
+    border-bottom: 2px solid $base-primary;
   }
 }
 
@@ -126,7 +126,7 @@
 .main-nav--opened .main-nav__toggle {
   width: 60px;
   height: 60px;
-  background-color: $base-white;;
+  background-color: $base-white;
   border: 0;
   cursor: pointer;
 
@@ -149,14 +149,14 @@
 .main-nav--closed .main-nav__toggle {
   &::before {
     width: 16px;
-    background-image: url(../../img/icons/stack.svg#burger);
+    background-image: url("../../img/icons/stack.svg#burger");
   }
 }
 
 .main-nav--opened .main-nav__toggle {
   &::before {
     width: 12px;
-    background-image: url(../../img/icons/stack.svg#close);
+    background-image: url("../../img/icons/stack.svg#close");
   }
 }
 
