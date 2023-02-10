@@ -1,9 +1,13 @@
 
-.filters__box {
+.filters__wrapper {
+  margin: 0;
+  padding: 0;
   border: 0;
 }
 
 .filters__title {
+  margin-bottom: 21px;
+
   font-size: 16px;
   line-height: 24px;
   font-weight: 600;
@@ -13,12 +17,160 @@
   @include list();
 }
 
+.filters__item {
+  margin-bottom: 22px;
+}
+
 .filters__label {
+  position: relative;
+  display: block;
+
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
+
+  cursor: pointer;
+  user-select: none;
 }
 
+// Состояния радиокнопок
+.filters__label--radio {
+  padding-left: 34px;
+
+  &::before,
+  &::after {
+    position: absolute;
+    border-radius: 50%;
+    content: "";
+  }
+
+  &::before {
+    top: 0;
+    left: 0;
+    width: 24px;
+    height: 24px;
+    border: 2px solid $base-grey;
+  }
+
+  &::after {
+    top: 4px;
+    left: 4px;
+    display: none;
+    width: 16px;
+    height: 16px;
+    background-color: $base-primary;
+  }
+}
+
+.filters__input:checked+.filters__label--radio::before {
+  border-color: $base-primary;
+}
+
+.filters__input:checked+.filters__label--radio::after {
+  display: block;
+}
+
+.filters__label--radio:hover:before,
+.filters__label--radio:hover:before {
+  @media (min-width: $tablet-width) {
+    border-color: $base-primary;
+  }
+}
+
+.filters__label--radio:hover:after,
+.filters__label--radio:focus:after {
+  @media (min-width: $tablet-width) {
+    background-color: $primary-opacity;
+  }
+}
+
+.filters__input:disabled+.filters__label--radio::before {
+  border-color: $light-grey;
+}
+
+.filters__input:disabled+.filters__label--radio::after {
+  background-color: $light-grey;
+}
+
+.filters__input:disabled+.filters__label--radio {
+  color: $base-grey;
+}
+
+// Состояния чекбоксов
+.filters__label--checkbox {
+  padding-left: 54px;
+
+  &::before,
+  &::after {
+    position: absolute;
+    content: "";
+  }
+
+  &::before {
+    top: 0;
+    left: 0;
+    width: 42px;
+    height: 24px;
+    background-color: $base-grey;
+    border-radius: 12px;
+  }
+
+  &::after {
+    top: 2px;
+    left: 2px;
+    width: 20px;
+    height: 20px;
+    background-color: $base-white;
+    border-radius: 50%;
+  }
+}
+
+.filters__input:checked+.filters__label--checkbox::before {
+  background-color: $base-primary;
+}
+
+.filters__input:checked+.filters__label--checkbox::after {
+  left: 20px;
+  transition: left 0.25s;
+}
+
+.filters__label--checkbox:hover:before {
+  background-color: $primary-opacity;
+  border: 2px solid $primary-lighter;
+}
+
+.filters__input:checked+.filters__label--checkbox:hover:before {
+  background-color: $base-primary;
+  border: none;
+}
+
+.filters__input:disabled+.filters__label--checkbox::before {
+  background-color: $light-grey;
+  cursor: default;
+}
+
+.filters__input:disabled+.filters__label--checkbox::after {
+  cursor: default;
+}
+
+.filters__input:disabled:checked+.filters__label--checkbox::after {
+  background-color: $base-grey;
+}
+
+.filters__input:disabled+.filters__label--checkbox:hover:before {
+  background-color: $light-grey;
+  border: none;
+}
+
+.filters__input:disabled:checked+.filters__label--checkbox:hover:after {
+  background-color: $base-grey;
+}
+
+.filters__input:disabled+.filters__label--checkbox {
+  color: $base-grey;
+}
+
+// Стили кнопок формы
 .filters__button {
   font-size: 14px;
   line-height: 24px;

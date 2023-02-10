@@ -124,7 +124,7 @@
   }
 }
 
-.swiper-slide__price-wrapper {
+.swiper-slide__price-box {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -165,6 +165,20 @@
 
   font-size: 16px;
   line-height: 24px;
+
+  &:hover,
+  &:focus {
+    background-color: $primary-lighter;
+  }
+
+  &:active {
+    background-color: $primary-darker;
+  }
+
+  &:disabled {
+    background-color: $base-grey;
+    cursor: not-allowed;
+  }
 }
 
 .swiper-slide__picture {
@@ -215,28 +229,24 @@
 .swiper-button-prev {
   left: 0;
 
-  @media (min-width: $desktop-width) {
-    &:hover {
-      background: linear-gradient(90deg, $base-white 0%, $opacity 100%);
-    }
+  &:hover {
+    background: linear-gradient(90deg, $base-white 0%, $opacity 100%);
+  }
 
-    &:active {
-      background: linear-gradient(90deg, $primary-opacity 0%, $opacity 100%);
-    }
+  &:active {
+    background: linear-gradient(90deg, $primary-opacity 0%, $opacity 100%);
   }
 }
 
 .swiper-button-next {
   right: 0;
 
-  @media (min-width: $desktop-width) {
-    &:hover {
-      background: linear-gradient(270deg, $base-white 0%, $opacity 100%);
-    }
+  &:hover {
+    background: linear-gradient(270deg, $base-white 0%, $opacity 100%);
+  }
 
-    &:active {
-      background: linear-gradient(270deg, $primary-opacity 0%, $opacity 100%);
-    }
+  &:active {
+    background: linear-gradient(270deg, $primary-opacity 0%, $opacity 100%);
   }
 }
 
@@ -258,12 +268,16 @@
 }
 
 .swiper-button-next__icon {
+  right: 4px;
+
   @media (min-width: $tablet-width) {
     right: 34px;
   }
 }
 
 .swiper-button-prev__icon {
+  left: 4px;
+
   @media (min-width: $tablet-width) {
     left: 34px;
   }

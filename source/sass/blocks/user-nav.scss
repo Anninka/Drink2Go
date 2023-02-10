@@ -33,15 +33,18 @@
 
   @media (min-width: $tablet-width) {
     padding: 32px 22px;
-  }
 
-  @media (min-width: $desktop-width) {
-    display: block;
-    padding: 32px 20px;
-    font-size: 12px;
-    font-weight: 500;
-    text-transform: uppercase;
-    color: $base-black;
+    &:hover,
+    &:focus {
+      color: $base-primary;
+    }
+
+    &:hover .user-nav__icon-user,
+    &:hover .user-nav__icon-header-cart,
+    &:focus .user-nav__icon-user,
+    &:focus .user-nav__icon-header-cart {
+      fill: $base-primary;
+    }
 
     &:active {
       color: $base-primary;
@@ -51,6 +54,15 @@
     &:active .user-nav__icon-header-cart {
       fill: $base-primary;
     }
+  }
+
+  @media (min-width: $desktop-width) {
+    display: block;
+    padding: 32px 20px;
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: $base-black;
   }
 }
 

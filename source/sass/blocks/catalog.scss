@@ -1,9 +1,18 @@
 
 .catalog {
+  padding: 50px 20px 44px;
   background-color: $lightest-grey;
 }
 
+.catalog-title-wrapper {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
 .catalog-title {
+  margin: 0;
+  margin-bottom: 4px;
+
   font-size: 12px;
   line-height: 16px;
   font-weight: 700;
@@ -12,6 +21,8 @@
 }
 
 .catalog-subtitle {
+  margin: 0;
+
   font-size: 24px;
   line-height: 36px;
   font-weight: 700;
