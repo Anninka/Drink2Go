@@ -116,7 +116,6 @@
 .footer__contacts-item--address {
   &::before {
     background-image: url("../../img/footer/mark.svg");
-
   }
 }
 
@@ -124,6 +123,10 @@
   &::before {
     background-image: url("../../img/footer/tel.svg");
   }
+}
+
+.footer__contacts-link {
+  @include link();
 }
 
 .footer__copyright-box {

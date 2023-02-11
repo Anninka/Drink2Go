@@ -46,7 +46,75 @@ const swiper = new Swiper('.swiper', {
     delay: 3000,
     // Закончить на последнем файле?
     stopOnLastSLide: false,
-    //Остановить листание после ручного переключения?
+    // Остановить листание после ручного переключения?
     disableOnIteraction: true,
   },
 });
+
+/* RANGE CONTROLS */
+const rangeControls = document.querySelector('.range-controls');
+
+if (rangeControls) {
+noUiSlider.create(rangeControls, {
+  start: [0, 900],
+  connect: true,
+  step: 10,
+  range: {
+      'min': 0,
+      'max': 1000
+  }
+  });
+
+  const minprice = document.getElementById('minprice');
+  const maxprice = document.getElementById('maxprice');
+  const inputs = [minprice, maxprice];
+
+  rangeControls.noUiSlider.on('update', function (values, handle){
+    inputs[handle].value = Math.round(values[handle]);
+  });
+
+  const setRangeSlider = (i, value) => {
+    let arr = [null, null];
+    arr[i] = value;
+
+    rangeControls.noUiSlider.set(arr);
+  };
+
+  inputs.forEach((el, index) => {
+    el.addEventListener('change', (e) => {
+    setRangeSlider(index, e.currentTarget.value);
+    });
+  });
+}
+
+/* LEAFLET */
+const map = L.map('map')
+  .setView({
+    lat: 59.96831,
+    lng: 30.31748,
+  }, 18);
+
+L.tileLayer(
+  'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+  {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+  },
+).addTo(map);
+
+const mainPinIcon = L.icon({
+  iconUrl: '../../img/map-pin.svg',
+  iconSize: [38, 50],
+  iconAnchor: [19, 50],
+});
+
+const marker = L.marker(
+  {
+    lat: 59.96831,
+    lng: 30.31748,
+  },
+  {
+    icon: mainPinIcon,
+  },
+);
+
+marker.addTo(map);

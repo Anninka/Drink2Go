@@ -2,6 +2,14 @@
 .catalog {
   padding: 50px 20px 44px;
   background-color: $lightest-grey;
+
+  @media (min-width: $tablet-width) {
+    padding: 80px 20px 90px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 100px 40px 120px;
+  }
 }
 
 .catalog-title-wrapper {
@@ -30,5 +38,12 @@
   @media (min-width: $tablet-width) {
     font-size: 42px;
     line-height: 64px;
+  }
+}
+
+.catalog-wrapper {
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
   }
 }

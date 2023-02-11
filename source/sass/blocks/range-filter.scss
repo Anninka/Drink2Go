@@ -1,0 +1,111 @@
+
+// Скрывает стрелочки в инпуте с типом number
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+// Стилизация контролов
+.range-controls {
+  height: 12px;
+  margin-bottom: 22px;
+  padding-left: 7px;
+
+  background-color: $lightest-grey;
+  border: none;
+  box-shadow: none;
+}
+
+// Толщина полоски
+.noUi-base {
+  height: 4px;
+}
+
+// Цвет полоски-подложки
+.noUi-connects {
+  background: $light-grey;
+}
+
+// Цвет полоски сверху
+.noUi-connect {
+  background: $base-primary;
+}
+
+.noUi-horizontal .noUi-handle {
+  box-sizing: content-box;
+  top: -12px;
+  right: -13px;
+
+  width: 24px;
+  height: 24px;
+
+  background: $base-white;
+  border: 2px solid $base-primary;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.noUi-horizontal .noUi-handle::after,
+.noUi-horizontal .noUi-handle::before {
+  display: none;
+}
+
+.range-filter {
+  width: 280px;
+
+  @media (min-width: $tablet-width) {
+    width: 223px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 318px;
+  }
+}
+
+.price-controls {
+  display: flex;
+  justify-content: space-between;
+
+  width: 280px;
+  margin-bottom: 30px;
+
+  @media (min-width: $tablet-width) {
+    width: 223px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 318px;
+  }
+}
+
+.price-controls input {
+  width: 118px;
+  height: 37px;
+  padding: 8px;
+
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+  text-align: center;
+  color: $base-black;
+
+  background: $base-white;
+  border: 2px solid $base-primary;
+  border-radius: 4px;
+
+  @media (min-width: $tablet-width) {
+    width: 94px;
+    height: 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 134px;
+  }
+}

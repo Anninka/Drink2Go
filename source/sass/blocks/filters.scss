@@ -1,4 +1,15 @@
 
+.filters__form {
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media (min-width: $desktop-width) {
+    display: block;
+  }
+}
+
 .filters__wrapper {
   margin: 0;
   padding: 0;
@@ -6,7 +17,7 @@
 }
 
 .filters__title {
-  margin-bottom: 21px;
+  margin-bottom: 20px;
 
   font-size: 16px;
   line-height: 24px;
@@ -62,37 +73,37 @@
   }
 }
 
-.filters__input:checked+.filters__label--radio::before {
+.filters__input:checked + .filters__label--radio::before {
   border-color: $base-primary;
 }
 
-.filters__input:checked+.filters__label--radio::after {
+.filters__input:checked + .filters__label--radio::after {
   display: block;
 }
 
-.filters__label--radio:hover:before,
-.filters__label--radio:hover:before {
+.filters__label--radio:hover::before,
+.filters__label--radio:focus::before {
   @media (min-width: $tablet-width) {
     border-color: $base-primary;
   }
 }
 
-.filters__label--radio:hover:after,
-.filters__label--radio:focus:after {
+.filters__label--radio:hover::after,
+.filters__label--radio:focus::after {
   @media (min-width: $tablet-width) {
     background-color: $primary-opacity;
   }
 }
 
-.filters__input:disabled+.filters__label--radio::before {
+.filters__input:disabled + .filters__label--radio::before {
   border-color: $light-grey;
 }
 
-.filters__input:disabled+.filters__label--radio::after {
+.filters__input:disabled + .filters__label--radio::after {
   background-color: $light-grey;
 }
 
-.filters__input:disabled+.filters__label--radio {
+.filters__input:disabled + .filters__label--radio {
   color: $base-grey;
 }
 
@@ -125,61 +136,96 @@
   }
 }
 
-.filters__input:checked+.filters__label--checkbox::before {
+.filters__input:checked + .filters__label--checkbox::before {
   background-color: $base-primary;
 }
 
-.filters__input:checked+.filters__label--checkbox::after {
+.filters__input:checked + .filters__label--checkbox::after {
   left: 20px;
   transition: left 0.25s;
 }
 
-.filters__label--checkbox:hover:before {
+.filters__label--checkbox:hover::before {
   background-color: $primary-opacity;
   border: 2px solid $primary-lighter;
 }
 
-.filters__input:checked+.filters__label--checkbox:hover:before {
+.filters__input:checked + .filters__label--checkbox:hover::before {
   background-color: $base-primary;
   border: none;
 }
 
-.filters__input:disabled+.filters__label--checkbox::before {
+.filters__input:disabled + .filters__label--checkbox::before {
   background-color: $light-grey;
   cursor: default;
 }
 
-.filters__input:disabled+.filters__label--checkbox::after {
+.filters__input:disabled + .filters__label--checkbox::after {
   cursor: default;
 }
 
-.filters__input:disabled:checked+.filters__label--checkbox::after {
+.filters__input:disabled:checked + .filters__label--checkbox::after {
   background-color: $base-grey;
 }
 
-.filters__input:disabled+.filters__label--checkbox:hover:before {
+.filters__input:disabled + .filters__label--checkbox:hover::before {
   background-color: $light-grey;
   border: none;
 }
 
-.filters__input:disabled:checked+.filters__label--checkbox:hover:after {
+.filters__input:disabled:checked + .filters__label--checkbox:hover::after {
   background-color: $base-grey;
 }
 
-.filters__input:disabled+.filters__label--checkbox {
+.filters__input:disabled + .filters__label--checkbox {
   color: $base-grey;
 }
 
 // Стили кнопок формы
-.filters__button {
-  font-size: 14px;
+.filters__buttons-box {
+  padding: 23px;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+  }
+}
+
+.filters__button,
+.filters__reset-button {
+  min-width: 160px;
+  padding: 10px 15px 11px;
+  margin-inline: auto;
   line-height: 24px;
+
+  @media (min-width: $tablet-width) {
+    min-width: 140px;
+    margin: 0;
+    padding: 8px 4px;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-width: 150px;
+  }
+}
+
+.filters__button {
+  margin-bottom: 25px;
+  font-size: 13px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+    font-size: 14px;
+  }
 }
 
 .filters__reset-button {
+  display: block;
+  font-family: "Montserrat", "Arial", sans-serif;
   font-size: 14px;
-  line-height: 24px;
   color: $base-primary;
   background-color: $base-white;
   border: none;
+  border-radius: 4px;
 }
