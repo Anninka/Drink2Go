@@ -6,6 +6,7 @@
 .swiper-slide {
   display: flex;
   flex-direction: column;
+  min-height: 656px;
   padding: 20px 20px 60px;
   text-align: center;
 
@@ -62,20 +63,24 @@
 }
 
 .swiper-slide__title {
-  margin: 0;
-  margin-bottom: 10px;
+  max-width: 290px;
+  margin: 0 auto 10px;
 
   font-size: 36px;
   line-height: 48px;
   font-weight: 700;
+  letter-spacing: 0.02em;
 
   @media (min-width: $tablet-width) {
+    max-width: 800px;
     margin-bottom: 16px;
     font-size: 56px;
     line-height: 80px;
   }
 
   @media (min-width: $desktop-width) {
+    margin: 0;
+    margin-bottom: 16px;
     width: 625px;
   }
 }
@@ -102,8 +107,8 @@
 }
 
 .swiper-slide__text {
-  margin: 0;
-  margin-bottom: 19px;
+  max-width: 400px;
+  margin: 0 auto 19px;
 
   font-size: 14px;
   line-height: 20px;
@@ -289,7 +294,7 @@
 }
 
 .swiper-pagination {
-  bottom: 70px;
+  bottom: 66px;
 }
 
 .swiper-pagination-bullet {

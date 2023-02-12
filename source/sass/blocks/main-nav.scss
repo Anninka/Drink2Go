@@ -42,8 +42,7 @@
   line-height: 16px;
 
   @media (min-width: $desktop-width) {
-    margin: 0;
-    margin-left: 20px;
+    margin: 4px 0 0 20px;
     width: 126px;
     font-size: 12px;
     font-weight: 400;
@@ -104,12 +103,16 @@
 
   @media (min-width: $tablet-width) {
     height: 80px;
-    padding-top: 32px;
+    padding: 32px 18px 20px 23px;
 
     &:hover,
     &:focus {
       color: $base-primary;
     }
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 32px 21px 20px;
   }
 }
 

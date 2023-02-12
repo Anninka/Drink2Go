@@ -14,12 +14,21 @@ input[type="number"] {
 // Стилизация контролов
 .range-controls {
   height: 12px;
-  margin-bottom: 22px;
+  margin-bottom: 27px;
   padding-left: 7px;
 
   background-color: $lightest-grey;
   border: none;
   box-shadow: none;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 24px;
+    padding-left: 16px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 9px;
+  }
 }
 
 // Толщина полоски
@@ -29,7 +38,12 @@ input[type="number"] {
 
 // Цвет полоски-подложки
 .noUi-connects {
+  width: 211px;
   background: $light-grey;
+
+  @media (min-width: $desktop-width) {
+    width: 310px;
+  }
 }
 
 // Цвет полоски сверху
@@ -39,11 +53,11 @@ input[type="number"] {
 
 .noUi-horizontal .noUi-handle {
   box-sizing: content-box;
-  top: -12px;
-  right: -13px;
+  top: -10px;
+  right: -15px;
 
-  width: 24px;
-  height: 24px;
+  width: 20px;
+  height: 20px;
 
   background: $base-white;
   border: 2px solid $base-primary;
@@ -73,20 +87,23 @@ input[type="number"] {
   justify-content: space-between;
 
   width: 280px;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
 
   @media (min-width: $tablet-width) {
-    width: 223px;
+    width: 221px;
+    margin-left: 6px;
   }
 
   @media (min-width: $desktop-width) {
     width: 318px;
+    margin-bottom: 32px;
+    margin-left: 0;
   }
 }
 
 .price-controls input {
   width: 118px;
-  height: 37px;
+  height: 38px;
   padding: 8px;
 
   font-family: inherit;

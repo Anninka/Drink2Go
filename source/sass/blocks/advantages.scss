@@ -1,10 +1,10 @@
 
 .advantages {
-  padding: 50px 20px 60px;
+  padding: 50px 20px 57px;
   text-align: center;
 
   @media (min-width: $tablet-width) {
-    padding: 60px 30px 100px;
+    padding: 52px 30px 99px;
   }
 
   @media (min-width: $desktop-width) {
@@ -25,7 +25,7 @@
 
 .advantages__subtitle {
   margin: 0;
-  margin-bottom: 99px;
+  margin-bottom: 100px;
 
   font-size: 24px;
   line-height: 36px;
@@ -136,6 +136,7 @@
 
 .advantages__caption--ecological::before {
   width: 46px;
+  margin-bottom: 2px;
   background: url("/../img/features/leaf.svg");
   background-repeat: no-repeat;
 }
