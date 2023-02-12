@@ -49,7 +49,7 @@ export function processStyles () {
 }
 
 export function processCss () {
-  return gulp.src('source/sass/*.css')
+  return gulp.src('source/css/*.css')
     .pipe(gulp.dest('build/css'))
 }
 

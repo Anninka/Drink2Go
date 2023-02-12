@@ -12,10 +12,12 @@
   @media (min-width: $tablet-width) {
     margin: 0;
     padding: 50px 30px 30px;
+  }
 
+  @media (min-width: $desktop-width) {
     &:hover,
     &:focus {
-      box-shadow: 0px 5px 15px $black-opacity;
+      box-shadow: 0 5px 15px $black-opacity;
     }
   }
 }
@@ -41,7 +43,7 @@
 .product__image-link {
   order: -1;
   margin-bottom: 20px;
-  text-align: center;
+  align-self: center;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 26px;

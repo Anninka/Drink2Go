@@ -21,11 +21,17 @@
   border-radius: 4px;
   cursor: pointer;
 
-  &:hover {
-
+  &:hover,
+  &:focus {
+    background-color: $primary-lighter;
   }
 
   &:active {
+    background-color: $primary-darker;
+  }
 
+  &:disabled {
+    background-color: $base-grey;
+    cursor: default;
   }
 }

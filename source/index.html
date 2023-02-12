@@ -4,10 +4,14 @@
     <meta charset="UTF-8">
     <title>Интернет-магазин кофейных напитков Drink2Go</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/swiper_bundle.min.css">
     <link rel="stylesheet" href="css/nouislider.min.css">
     <link rel="stylesheet" href="css/leaflet.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="preload" href="fonts/Montserrat_Bold.woff2" as="font">
+    <link rel="preload" href="fonts/Montserrat_Medium.woff2" as="font">
+    <link rel="preload" href="fonts/Montserrat_Regular.woff2" as="font">
+    <link rel="preload" href="fonts/Montserrat_SemiBold.woff2" as="font">
     <link rel="icon" href="favicon.ico">
     <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml">
     <link rel="icon" href="img/favicons/apple.png">
@@ -15,13 +19,13 @@
   </head>
   <body class="page__body">
     <header class="page-header">
-      <nav class="main-nav main-nav--closed main-nav--nojs">
+      <nav class="main-nav main-nav--opened main-nav--nojs">
         <div class="main-nav__logo-wrapper">
           <a class="main-nav__logo-link">
             <picture>
-              <source media="(min-width: 1440px)" srcset="img/header/logo-desc.svg">
-              <source media="(min-width: 768px)" srcset="img/header/logo-tablet.svg">
-              <img class="main-nav__logo" src="img/header/logo-mobile.svg" width="32" height="36" fetchpriority="high" alt="Магазин «Drink2Go».">
+              <source media="(min-width: 1440px)" srcset="img/header/logo_desc.svg">
+              <source media="(min-width: 768px)" srcset="img/header/logo_tablet.svg">
+              <img class="main-nav__logo" src="img/header/logo_mobile.svg" width="32" height="36" alt="Магазин «Drink2Go».">
             </picture>
           </a>
           <p class="main-nav__text">Интернет-магазин кофейных напитков</p>
@@ -95,7 +99,7 @@
 
                 <source media="(min-width: 1440px)" srcset="img/slider/flat_white_desk.png 1x, img/slider/flat_white_desk@2x.png 2x">
                 <source media="(min-width: 768px)" srcset="img/slider/flat_white_tablet.png 1x, img/slider/flat_white_tablet@2x.png 2x">
-                <img class="swiper-slide__image" src="img/slider/flat_white_mobile.png" srcset="img/flat_white_mobile@2x.png 2x" width="280" height="280" fetchpriority="high" alt="Банка напитка молочного цвета Decaf Flat White.">
+                <img class="swiper-slide__image" src="img/slider/flat_white_mobile.png" srcset="img/flat_white_mobile@2x.png 2x" width="280" height="280" alt="Банка напитка молочного цвета Decaf Flat White.">
               </picture>
             </div>
             <div class="swiper-slide swiper-slide--second">
@@ -112,7 +116,7 @@
                 <source type="image/webp" media="(min-width: 768px)" srcset="img/slider/lavender_tablet.webp 1x, img/slider/lavender_tablet@2x.webp 2x">
                 <source type="image/webp" srcset="img/slider/lavender_mobile.webp 1x, img/slider/lavender_mobile@2x.webp 2x">
 
-                <source media="(min-width: 1440px)" srcset="img/slider/lavender_desk.png 1x, img/slider/lavender_desk.png@2x.png 2x">
+                <source media="(min-width: 1440px)" srcset="img/slider/lavender_desk.png 1x, img/slider/lavender_desk@2x.png 2x">
                 <source media="(min-width: 768px)" srcset="img/slider/lavender_tablet.png 1x, img/slider/lavender_tablet@2x.png 2x">
                 <img class="swiper-slide__image" src="img/slider/lavender_mobile.png" srcset="img/slider/lavender_mobile@2x.png 2x" width="280" height="280" alt="Банка напитка фиолетового цвета Lavender Latte.">
               </picture>
@@ -182,6 +186,7 @@
         </div>
         <div class="catalog-wrapper">
           <section class="filters">
+            <h2 class="visually-hidden">Фильтр товаров.</h2>
             <form class="filters__form" method="get" action="https://echo.htmlacademy.ru">
               <fieldset class="filters__wrapper filters__wrapper--price">
                 <legend class="filters__title-price">Цена</legend>
@@ -189,10 +194,10 @@
                   <div class="range-controls"></div>
                   <div class="price-controls">
                     <label class="min-price">
-                      <input type="number" name="minprice" placeholder="0" min="0" max="1000" id="minprice">
+                      <input type="number" name="minprice" placeholder="0" min="0" max="1000" id="minprice" value="">
                     </label>
                     <label class="max-price">
-                      <input type="number" name="maxprice" placeholder="1000" min="0" max="1000" id="maxprice">
+                      <input type="number" name="maxprice" placeholder="1000" min="0" max="1000" id="maxprice" value="900">
                     </label>
                   </div>
                 </div>
@@ -250,6 +255,7 @@
             </form>
           </section>
           <section class="products">
+            <h2 class="visually-hidden">Сортировка и список товаров.</h2>
             <div class="products__sort-wrapper">
               <p class="products__sort">Сортировка:</p>
               <div class="products__sort-box">
@@ -349,7 +355,7 @@
               <a class="product__image-link" href="blank.html">
                 <picture>
                   <source type="image/webp" srcset="img/products/coffee6.webp 1x, img/products/coffee6@2x.webp 2x">
-                  <img class="product__image" src="img/products/coffee6.png" srcset="img/products/coffee6@2x.png" width="130" height="188" loading="lazy" srcset="img/products/coffee6@2x.png" alt="Банка напитка желтого цвета.">
+                  <img class="product__image" src="img/products/coffee6.png" srcset="img/products/coffee6@2x.png" width="130" height="188" loading="lazy" alt="Банка напитка желтого цвета.">
                 </picture>
               </a>
               <p class="product__text">Кофе без кофеина из Эфиопии с&nbsp;натуральным фермерским молоком</p>
@@ -376,9 +382,10 @@
           </section>
         </div>
       </section>
-      <section class="map">
-        <h2 class="visually-hidden">Наше местоположение на карте</h2>
+      <section class="map map--nojs">
+        <h2 class="visually-hidden">Наше местоположение на карте.</h2>
         <div class="map__box" id="map"></div>
+        <div class="map__picture"></div>
       </section>
     </main>
     <footer class="footer">
@@ -386,8 +393,8 @@
         <div class="social">
           <a class="social__shop-link" href="#">
             <picture>
-              <source media="(min-width: 768px)" srcset="img/header/logo-desc.svg">
-              <img class="social__shop-image" src="img/header/logo-tablet.svg" width="82" height="36" alt="Магазин «Drink2Go».">
+              <source media="(min-width: 768px)" srcset="img/header/logo_desc.svg">
+              <img class="social__shop-image" src="img/header/logo_tablet.svg" width="82" height="36" alt="Магазин «Drink2Go».">
             </picture>
           </a>
           <p class="social__shop-text">Интернет-магазин кофейных напитков</p>
@@ -466,9 +473,9 @@
         </p>
       </div>
     </footer>
-    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/swiper_bundle.min.js"></script>
     <script src="js/nouislider.min.js"></script>
     <script src="js/leaflet.min.js"></script>
-    <script src="js/script.js"></script>
+    <script src="js/main.js" type="module"></script>
   </body>
 </html>

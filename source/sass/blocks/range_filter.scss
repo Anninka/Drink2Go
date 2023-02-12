@@ -2,13 +2,13 @@
 // Скрывает стрелочки в инпуте с типом number
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
+  appearance: none;
   margin: 0;
 }
 
 /* Firefox */
 input[type="number"] {
-  -moz-appearance: textfield;
+  appearance: textfield;
 }
 
 // Стилизация контролов
@@ -38,8 +38,12 @@ input[type="number"] {
 
 // Цвет полоски-подложки
 .noUi-connects {
-  width: 211px;
+  width: 280px;
   background: $light-grey;
+
+  @media (min-width: $tablet-width) {
+    width: 211px;
+  }
 
   @media (min-width: $desktop-width) {
     width: 310px;
@@ -63,6 +67,21 @@ input[type="number"] {
   border: 2px solid $base-primary;
   border-radius: 50%;
   cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background: $primary-light;
+    outline: 2px solid $base-white;
+    outline-offset: -4px;
+  }
+
+  &:active {
+    background: $base-primary;
+  }
+
+  &:disabled {
+    border-color: $base-grey;
+  }
 }
 
 .noUi-horizontal .noUi-handle::after,
@@ -116,6 +135,17 @@ input[type="number"] {
   background: $base-white;
   border: 2px solid $base-primary;
   border-radius: 4px;
+
+  &:focus-visible {
+    outline: none;
+    border: 2px solid $primary-darker;
+    border-radius: 4px;
+  }
+
+  &:disabled {
+    color: $base-grey;
+    border-color: $light-grey;
+  }
 
   @media (min-width: $tablet-width) {
     width: 94px;
