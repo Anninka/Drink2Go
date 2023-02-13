@@ -3,6 +3,7 @@ const rangeControls = document.querySelector('.range-controls');
 
 if (rangeControls) {
 noUiSlider.create(rangeControls, {
+  animate: false,
   start: [0, 900],
   connect: true,
   step: 10,
@@ -15,6 +16,11 @@ noUiSlider.create(rangeControls, {
   const minprice = document.getElementById('minprice');
   const maxprice = document.getElementById('maxprice');
   const inputs = [minprice, maxprice];
+  const resetBtn = document.querySelector('.filters__reset-button');
+
+  resetBtn.addEventListener('click', () => {
+    rangeControls.noUiSlider.set([0, 900]);
+  })
 
   rangeControls.noUiSlider.on('update', function (values, handle){
     inputs[handle].value = Math.round(values[handle]);

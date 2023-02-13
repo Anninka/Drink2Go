@@ -31,4 +31,13 @@ const marker = L.marker(
   },
 );
 
+map.on('click', function() {
+  if (!map.scrollWheelZoom.enabled()) {
+    map.scrollWheelZoom.enable();
+  }
+});
+map.on('mouseout', function() {
+  map.scrollWheelZoom.disable();
+});
+
 marker.addTo(map);
