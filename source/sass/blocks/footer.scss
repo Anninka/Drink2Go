@@ -73,7 +73,7 @@
   letter-spacing: 0.02em;
 
   &:hover,
-  &:focus {
+  &:focus-visible {
     color: $primary-lighter;
   }
 
@@ -178,15 +178,9 @@
   &:active {
     fill: $primary-darker;
   }
+}
 
-  @media (min-width: $tablet-width) {
-    &:hover,
-    &:focus {
-      fill: $base-primary;
-    }
-
-    &:active {
-      fill: $primary-darker;
-    }
-  }
+.footer__copyright-link:hover .footer__copyright-icon,
+.footer__copyright-link:focus-visible .footer__copyright-icon {
+  fill: $base-primary;
 }

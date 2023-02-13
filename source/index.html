@@ -21,9 +21,9 @@
     <header class="page-header">
       <nav class="main-nav main-nav--opened main-nav--nojs">
         <div class="main-nav__logo-wrapper">
-          <a class="main-nav__logo-link">
+          <a class="main-nav__logo-link" href="">
             <picture>
-              <source media="(min-width: 1440px)" srcset="img/header/logo_desc.svg">
+              <source media="(min-width: 1440px)" srcset="img/header/logo_desk.svg">
               <source media="(min-width: 768px)" srcset="img/header/logo_tablet.svg">
               <img class="main-nav__logo" src="img/header/logo_mobile.svg" width="32" height="36" alt="Магазин «Drink2Go».">
             </picture>
@@ -93,7 +93,7 @@
                 <button class="swiper-slide__button button" type="button">Заказать</button>
               </div>
               <picture class="swiper-slide__picture">
-                <source type="image/webp" media="(min-width: 1440px)" srcset="img/slider/flat_white_desk.webp 1x, img/slider/flat_white_desc@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 1440px)" srcset="img/slider/flat_white_desk.webp 1x, img/slider/flat_white_desk@2x.webp 2x">
                 <source type="image/webp" media="(min-width: 768px)" srcset="img/slider/flat_white_tablet.webp 1x, img/slider/flat_white_tablet@2x.webp 2x">
                 <source type="image/webp" srcset="img/slider/flat_white_mobile.webp 1x, img/slider/flat_white_mobile@2x.webp 2x">
 
@@ -146,12 +146,12 @@
           <div class="swiper-pagination"></div>
 
           <!-- If we need navigation buttons -->
-          <div class="swiper-button-prev swiper-button-disabled">
+          <div class="swiper-button-prev swiper-button-disabled" role="button" tabindex="0">
             <svg class="swiper-button-prev__icon" width="11" height="20">
               <use xlink:href="img/icons/stack.svg#prev"></use>
             </svg>
           </div>
-          <div class="swiper-button-next swiper-button-disabled">
+          <div class="swiper-button-next swiper-button-disabled" role="button" tabindex="0">
             <svg class="swiper-button-next__icon" width="11" height="20">
               <use xlink:href="img/icons/stack.svg#next"></use>
             </svg>
@@ -187,7 +187,7 @@
         <div class="catalog-wrapper">
           <section class="filters">
             <h2 class="visually-hidden">Фильтр товаров.</h2>
-            <form class="filters__form" method="get" action="https://echo.htmlacademy.ru">
+            <form class="filters__form" method="get" action="">
               <fieldset class="filters__wrapper filters__wrapper--price">
                 <legend class="filters__title-price">Цена</legend>
                 <div class="range-filter">
@@ -206,19 +206,19 @@
                 <legend class="filters__title ">Наличие молока</legend>
                 <ul class="filters__list">
                   <li class="filters__item">
-                    <input class="visually-hidden filters__input" type="radio" name="milk" value="nomatter" id="nomatter" checked>
+                    <input class="visually-hidden filters__input filters__input--radio" type="radio" name="milk" value="nomatter" id="nomatter" checked>
                     <label class="filters__label filters__label--radio" for="nomatter">Неважно</label>
                   </li>
                   <li class="filters__item">
-                    <input class="visually-hidden filters__input" type="radio" name="milk" value="animal" id="animal">
+                    <input class="visually-hidden filters__input filters__input--radio" type="radio" name="milk" value="animal" id="animal">
                     <label class="filters__label filters__label--radio" for="animal">Только животное</label>
                   </li>
                   <li class="filters__item">
-                    <input class="visually-hidden filters__input" type="radio" name="milk" value="vegetable" id="vegetable">
+                    <input class="visually-hidden filters__input filters__input--radio" type="radio" name="milk" value="vegetable" id="vegetable">
                     <label class="filters__label filters__label--radio" for="vegetable">Только растительное</label>
                   </li>
                   <li class="filters__item">
-                    <input class="visually-hidden filters__input" type="radio" name="milk" value="nomilk" id="nomilk" disabled>
+                    <input class="visually-hidden filters__input filters__input--radio" type="radio" name="milk" value="nomilk" id="nomilk" disabled>
                     <label class="filters__label filters__label--radio" for="nomilk">Без молока</label>
                   </li>
                 </ul>
@@ -227,23 +227,23 @@
                 <legend class="filters__title">Страна произрастания</legend>
                 <ul class="filters__list">
                   <li class="filters__item">
-                    <input class="visually-hidden filters__input" type="checkbox" name="country" id="brazil" checked>
+                    <input class="visually-hidden filters__input filters__input--checkbox" type="checkbox" name="brazil" id="brazil" checked>
                     <label class="filters__label filters__label--checkbox" for="brazil">Бразилия</label>
                   </li>
                   <li class="filters__item">
-                    <input class="visually-hidden filters__input" type="checkbox" name="country" id="ethiopia">
+                    <input class="visually-hidden filters__input filters__input--checkbox" type="checkbox" name="ethiopia" id="ethiopia">
                     <label class="filters__label filters__label--checkbox" for="ethiopia">Эфиопия</label>
                   </li>
                   <li class="filters__item">
-                    <input class="visually-hidden filters__input" type="checkbox" name="country" id="colombia">
+                    <input class="visually-hidden filters__input filters__input--checkbox" type="checkbox" name="colombia" id="colombia">
                     <label class="filters__label filters__label--checkbox" for="colombia">Колумбия</label>
                   </li>
                   <li class="filters__item">
-                    <input class="visually-hidden filters__input" type="checkbox" name="country" id="costarica">
+                    <input class="visually-hidden filters__input filters__input--checkbox" type="checkbox" name="costarica" id="costarica">
                     <label class="filters__label filters__label--checkbox" for="costarica">Коста-Рика</label>
                   </li>
                   <li class="filters__item">
-                    <input class="visually-hidden filters__input" type="checkbox" name="country" id="peru" disabled>
+                    <input class="visually-hidden filters__input filters__input--checkbox" type="checkbox" name="peru" id="peru" disabled>
                     <label class="filters__label filters__label--checkbox" for="peru">Перу</label>
                   </li>
                 </ul>
@@ -256,16 +256,22 @@
           </section>
           <section class="products">
             <h2 class="visually-hidden">Сортировка и список товаров.</h2>
-            <div class="products__sort-wrapper">
-              <p class="products__sort">Сортировка:</p>
+            <div class="products__sort products__sort--closed products__sort--nojs">
+              <p class="products__sort-text">Сортировка:</p>
               <div class="products__sort-box">
                 <button class="products__sort-button" type="button">по умолчанию</button>
                 <ul class="products__sort-list">
-                  <li class="products__sort-item">по умолчанию</li>
-                  <li class="products__sort-item">сначала дорогие</li>
-                  <li class="products__sort-item">сначала дешёвые</li>
-                  <li class="products__sort-item">высокий рейтинг</li>
+                  <li class="products__sort-item products__sort-item--selected" role="button" tabindex="0">по умолчанию</li>
+                  <li class="products__sort-item" role="button" tabindex="0">сначала дорогие</li>
+                  <li class="products__sort-item" role="button" tabindex="0">сначала дешёвые</li>
+                  <li class="products__sort-item" role="button" tabindex="0">высокий рейтинг</li>
                 </ul>
+                <select class="products__select">
+                  <option value="default">по умолчанию</option>
+                  <option value="cheap">сначала дорогие</option>
+                  <option value="expensive">сначала дешёвые</option>
+                  <option value="high-rating">высокий рейтинг</option>
+                </select>
               </div>
             </div>
             <article class="product">
@@ -391,9 +397,9 @@
     <footer class="footer">
       <div class="footer-box">
         <div class="social">
-          <a class="social__shop-link" href="#">
+          <a class="social__shop-link" href="">
             <picture>
-              <source media="(min-width: 768px)" srcset="img/header/logo_desc.svg">
+              <source media="(min-width: 768px)" srcset="img/header/logo_desk.svg">
               <img class="social__shop-image" src="img/header/logo_tablet.svg" width="82" height="36" alt="Магазин «Drink2Go».">
             </picture>
           </a>

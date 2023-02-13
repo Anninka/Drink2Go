@@ -15,7 +15,7 @@
   }
 }
 
-.products__sort-wrapper {
+.products__sort {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -33,12 +33,16 @@
   }
 }
 
-.products__sort {
+.products__sort-text {
   margin: 0;
 
   font-size: 16px;
   line-height: 24px;
   font-weight: 600;
+}
+
+.products__sort-box {
+  position: relative;
 }
 
 .products__sort-button {
@@ -56,10 +60,11 @@
 
   background-color: $lightest-grey;
   border: none;
+  cursor: pointer;
 
   &::after {
     position: absolute;
-    top: 12px;
+    top: 13px;
     right: 7px;
     width: 10px;
     height: 6px;
@@ -68,13 +73,105 @@
   }
 }
 
-.products__sort-list {
-  @include list();
+.products__sort--nojs .products__sort-button {
   display: none;
+}
+
+.products__sort--opened .products__sort-button {
+  &::after {
+    transform: rotate(180deg);
+  }
+}
+
+.products__sort--closed .products__sort-list,
+.products__sort--nojs .products__sort-list {
+  display: none
+}
+
+.products__sort--opened .products__sort-list {
+  @include list();
+  position: absolute;
+  top: 42px;
+  left: -17px;
+  display: block;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  color: $base-black;
+  background-color: $base-white;
+  border-radius: 4px;
+}
+
+.products__sort-item {
+  display: block;
+  width: 190px;
+  padding: 8px 20px;
+  border-bottom: 1px solid $base-secondary;
+  cursor: pointer;
+
+  &:hover,
+  &:focus-visible {
+    background-color: $base-secondary;
+  }
+
+  &:first-child {
+    border-radius: 4px 4px 0 0;
+  }
+
+  &:last-child {
+    border: none;
+    border-radius: 0 0 4px 4px;
+  }
+}
+
+.products__sort-item--selected {
+  background-color: $base-primary;
+  color: $base-white;
+
+  &:hover,
+  &:focus-visible {
+    background-color: $base-primary;
+  }
+}
+
+.products__select {
+  display: none;
+}
+
+.products__sort--nojs .products__select {
+  display: block;
+  position: relative;
+  height: 32px;
+  padding: 0 6px 2px 2px;
+
+  font-family: "Montserrat", "Arial", sans-serif;
   font-size: 16px;
   line-height: 24px;
   font-weight: 600;
   color: $base-primary;
+  text-align: end;
+
+  background-color: $lightest-grey;
+  border: none;
+  cursor: pointer;
+
+  &:focus-visible {
+    outline: none;
+  }
+
+  &::after {
+    position: absolute;
+    top: 13px;
+    right: 7px;
+    width: 10px;
+    height: 6px;
+    background: url("../../img/products/arrow.svg");
+    content: "";
+  }
+}
+
+.products__select option {
+
 }
 
 .products__pagination {
@@ -111,7 +208,7 @@
   cursor: pointer;
 
   &:hover,
-  &:focus {
+  &:focus-visible {
     color: $base-white;
     background-color: $primary-lighter;
   }
@@ -197,7 +294,7 @@
   cursor: pointer;
 
   &:hover,
-  &:focus {
+  &:focus-visible {
     color: $base-white;
     background-color: $primary-lighter;
   }

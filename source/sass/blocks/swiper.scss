@@ -21,7 +21,7 @@
     column-gap: 30px;
     text-align: start;
 
-    padding: 30px 80px 84px;
+    padding: 30px 80px 80px;
     min-height: 714px;
   }
 }
@@ -140,7 +140,8 @@
 
   @media (min-width: $desktop-width) {
     justify-content: start;
-    padding-bottom: 158px;
+    margin: 0;
+    padding-bottom: 162px;
   }
 }
 
