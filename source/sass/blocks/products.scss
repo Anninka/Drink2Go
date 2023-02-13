@@ -47,9 +47,7 @@
 
 .products__sort-button {
   position: relative;
-  height: 32px;
-  padding-left: 21px;
-  padding-right: 27px;
+  padding: 4px 27px 4px 21px;;
 
   font-family: "Montserrat", "Arial", sans-serif;
   font-size: 16px;
@@ -168,10 +166,6 @@
     background: url("../../img/products/arrow.svg");
     content: "";
   }
-}
-
-.products__select option {
-
 }
 
 .products__pagination {
