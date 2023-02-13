@@ -120,6 +120,36 @@ input[type="number"] {
   }
 }
 
+.max-price {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    top: 18px;
+    left: -26px;
+    width: 8px;
+    height: 2px;
+    background-color: $base-grey;
+    content: "";
+  }
+
+  @media (min-width: $tablet-width) {
+    &::before {
+      top: 19px;
+      left: -20px;
+      width: 7px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &::before {
+      top: 19px;
+      left: -30px;
+      width: 10px;
+    }
+  }
+}
+
 .price-controls input {
   width: 118px;
   height: 38px;
