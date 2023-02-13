@@ -21,7 +21,7 @@
     <header class="page-header">
       <nav class="main-nav main-nav--opened main-nav--nojs">
         <div class="main-nav__logo-wrapper">
-          <a class="main-nav__logo-link" href="">
+          <a class="main-nav__logo-link">
             <picture>
               <source media="(min-width: 1440px)" srcset="img/header/logo_desk.svg">
               <source media="(min-width: 768px)" srcset="img/header/logo_tablet.svg">
@@ -187,7 +187,7 @@
         <div class="catalog-wrapper">
           <section class="filters">
             <h2 class="visually-hidden">Фильтр товаров.</h2>
-            <form class="filters__form" method="get" action="">
+            <form class="filters__form" method="get" action="#">
               <fieldset class="filters__wrapper filters__wrapper--price">
                 <legend class="filters__title-price">Цена</legend>
                 <div class="range-filter">
@@ -261,10 +261,10 @@
               <div class="products__sort-box">
                 <button class="products__sort-button" type="button">по умолчанию</button>
                 <ul class="products__sort-list">
-                  <li class="products__sort-item products__sort-item--selected" role="button" tabindex="0">по умолчанию</li>
-                  <li class="products__sort-item" role="button" tabindex="0">сначала дорогие</li>
-                  <li class="products__sort-item" role="button" tabindex="0">сначала дешёвые</li>
-                  <li class="products__sort-item" role="button" tabindex="0">высокий рейтинг</li>
+                  <li class="products__sort-item products__sort-item--selected" tabindex="0">по умолчанию</li>
+                  <li class="products__sort-item" tabindex="0">сначала дорогие</li>
+                  <li class="products__sort-item" tabindex="0">сначала дешёвые</li>
+                  <li class="products__sort-item" tabindex="0">высокий рейтинг</li>
                 </ul>
                 <select class="products__select">
                   <option value="default">по умолчанию</option>
@@ -397,7 +397,7 @@
     <footer class="footer">
       <div class="footer-box">
         <div class="social">
-          <a class="social__shop-link" href="">
+          <a class="social__shop-link">
             <picture>
               <source media="(min-width: 768px)" srcset="img/header/logo_desk.svg">
               <img class="social__shop-image" src="img/header/logo_tablet.svg" width="82" height="36" alt="Магазин «Drink2Go».">
