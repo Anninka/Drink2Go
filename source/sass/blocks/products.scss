@@ -48,7 +48,7 @@
   position: relative;
   padding: 4px 27px 4px 21px;
 
-  font-family: "Montserrat", "Arial", sans-serif;
+  font-family: "montserrat", "Arial", sans-serif;
   font-size: 16px;
   line-height: 24px;
   font-weight: 600;
@@ -141,7 +141,7 @@
   height: 32px;
   padding: 0 6px 2px 2px;
 
-  font-family: "Montserrat", "Arial", sans-serif;
+  font-family: "montserrat", "Arial", sans-serif;
   font-size: 16px;
   line-height: 24px;
   font-weight: 600;
@@ -192,7 +192,7 @@
   min-width: 40px;
   height: 40px;
   padding: 15px;
-  font-family: "Montserrat", "Arial", sans-serif;
+  font-family: "montserrat", "Arial", sans-serif;
   font-size: 0;
   background-color: $base-white;
   border: none;
@@ -237,7 +237,7 @@
 }
 
 .products__pagination-back {
-  font-family: "Montserrat", "Arial", sans-serif;
+  font-family: "montserrat", "Arial", sans-serif;
 
   @media (max-width: $tablet-width) {
     &::before {
@@ -247,7 +247,7 @@
 }
 
 .products__pagination-next {
-  font-family: "Montserrat", "Arial", sans-serif;
+  font-family: "montserrat", "Arial", sans-serif;
 
   @media (max-width: $tablet-width) {
     &::before {
@@ -274,7 +274,7 @@
   min-width: 40px;
   height: 40px;
 
-  font-family: "Montserrat", "Arial", sans-serif;
+  font-family: "montserrat", "Arial", sans-serif;
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;

@@ -12,12 +12,12 @@
   }
 }
 
-.catalog-title-wrapper {
+.catalog__title-wrapper {
   margin-bottom: 22px;
   text-align: center;
 }
 
-.catalog-title {
+.catalog__title {
   margin: 0;
   margin-bottom: 4px;
 
@@ -28,7 +28,7 @@
   color: $base-primary;
 }
 
-.catalog-subtitle {
+.catalog__subtitle {
   margin: 0;
 
   font-size: 24px;
@@ -41,7 +41,7 @@
   }
 }
 
-.catalog-wrapper {
+.catalog__wrapper {
   @media (min-width: $desktop-width) {
     display: grid;
     grid-template-columns: 1fr 3fr;
